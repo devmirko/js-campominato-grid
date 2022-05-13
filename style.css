@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 /* Header */
 
@@ -14,24 +17,78 @@ header {
     justify-content: space-between;
 }
 
-main{
+/* sezione tasti */
+
+
+#sezione_difficolta {
+    font-size: 18px;
+   
+}
+
+.dif_container{
+ 
+}
+
+
+#play {
+    font-size: 11px;
+    padding: 0 20px;
+}
+
+/* Main */
+main {
     height: calc(100vh - 75px);
-    background-color: red;
+    min-height: 280px;
+    background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#grid{
+#grid {
     display: flex;
-    width: 1000px;
-    height: 1000px;
-    /* debugger */
-    background-color: blue;
-
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    position: relative;
 }
 
-.square{
-    
+
+.grid_square {
+    border: 1px solid black;
+    position: relative;
+    cursor: pointer;
 }
 
+.grid_square.facile {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.grid_square.medio {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.grid_square.difficile {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+.grid_square.active {
+    background-color: aqua;
+}
+
+.grid_number {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Footer */
+footer {
+    height: 30px;
+}
